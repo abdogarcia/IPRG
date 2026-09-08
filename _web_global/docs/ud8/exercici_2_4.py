@@ -1,0 +1,1 @@
+../../../ud8 Fitxers/docs/exercici_2_4.py

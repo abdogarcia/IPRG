@@ -1,0 +1,28 @@
+ÚS RÀPID
+
+1. Copia web_iprg.py dins de la carpeta IPRG, al mateix nivell que ud0, ud1, ud2...
+
+2. Des de la carpeta IPRG executa:
+
+   python3 web_iprg.py
+
+3. Obri:
+   http://127.0.0.1:8000/
+
+4. Per parar MkDocs:
+   Ctrl+C
+
+El script:
+- detecta automàticament ud0, ud1, ud2...
+- busca on estan els Markdown de cada UD
+- no modifica els apunts originals
+- no duplica els fitxers: crea enllaços simbòlics a fitxers dins de _web_global/
+- genera automàticament el mkdocs.yml global
+- inclou només les UD que ja tenen Markdown
+- manté les admonitions, ressaltat de Python i botó de copiar codi
+- vigila els directoris originals mentre mkdocs serve està en marxa
+
+Per regenerar sense arrancar el servidor:
+   python3 web_iprg.py --generate-only
+
+La carpeta _web_global es pot esborrar quan vulgues: es torna a generar automàticament.

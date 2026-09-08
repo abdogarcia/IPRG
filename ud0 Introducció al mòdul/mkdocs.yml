@@ -1,0 +1,47 @@
+site_name: Introducció a la Programació (IPRG)
+site_url: https://abeneto.github.io/IPRG_2526
+
+nav:
+  - Mòdul Introducció a la Programació: index.md
+  - 1. Fonaments de la Programació:  u1
+  - 2. Estructures de Control i Depuració: u2
+  - 3. E/S i Gestió de Dades: u3
+  - 4. Matrius, Operacions Agregades i Expressions Regulars: u4
+  - Sobre...: about.md
+
+
+theme:
+  name: 'material'
+  logo: 'img/logo.png'
+  favicon: 'img/logo.png'
+  features:
+    - content.code.copy # PEr copiar codi
+  palette:
+    accent: deep purple
+    primary: amber
+
+extra_css:
+  - https://joamuran.net/curs24_25/css/material-just.css
+
+plugins:
+  - search
+  #- glightbox # Per vore les imatges en gran quan fas clic en elles.
+# - pandoc
+
+markdown_extensions:
+  - attr_list         # Permet incorporar atributs a les imatges { width=100px }
+  - md_in_html # Junt a attr_list per afegir peus a les imatges
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      baselevel: 2
+      toc_depth: 3

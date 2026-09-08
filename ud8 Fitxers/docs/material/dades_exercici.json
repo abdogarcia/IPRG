@@ -1,0 +1,183 @@
+[
+    {
+        "nom": "NBhfa",
+        "edat": 27,
+        "nota": 8.4,
+        "assignatures": [
+            "Matemàtiques",
+            "Informàtica"
+        ]
+    },
+    {
+        "nom": "HjPXK",
+        "edat": 26,
+        "nota": 6.8,
+        "assignatures": [
+            "Geografia",
+            "Biologia"
+        ]
+    },
+    {
+        "nom": "rCjCJ",
+        "edat": 18,
+        "nota": 9.9,
+        "assignatures": [
+            "Biologia",
+            "Història"
+        ]
+    },
+    {
+        "nom": "OPjCt",
+        "edat": 20,
+        "nota": 7.3,
+        "assignatures": [
+            "Biologia",
+            "Geografia"
+        ]
+    },
+    {
+        "nom": "Ezlal",
+        "edat": 26,
+        "nota": 5.7,
+        "assignatures": [
+            "Matemàtiques",
+            "Geografia"
+        ]
+    },
+    {
+        "nom": "sNmmu",
+        "edat": 22,
+        "nota": 9.5,
+        "assignatures": [
+            "Física",
+            "Matemàtiques"
+        ]
+    },
+    {
+        "nom": "vLLNM",
+        "edat": 27,
+        "nota": 5.5,
+        "assignatures": [
+            "Anglès",
+            "Física"
+        ]
+    },
+    {
+        "nom": "ntTej",
+        "edat": 18,
+        "nota": 7.3,
+        "assignatures": [
+            "Economia",
+            "Història"
+        ]
+    },
+    {
+        "nom": "iAcDc",
+        "edat": 26,
+        "nota": 7.5,
+        "assignatures": [
+            "Dibuix",
+            "Matemàtiques"
+        ]
+    },
+    {
+        "nom": "RPEbY",
+        "edat": 22,
+        "nota": 6.8,
+        "assignatures": [
+            "Física",
+            "Geografia"
+        ]
+    },
+    {
+        "nom": "cBMWu",
+        "edat": 21,
+        "nota": 8.2,
+        "assignatures": [
+            "Geografia",
+            "Anglès"
+        ]
+    },
+    {
+        "nom": "QiCcN",
+        "edat": 24,
+        "nota": 5.9,
+        "assignatures": [
+            "Anglès",
+            "Geografia"
+        ]
+    },
+    {
+        "nom": "mWHkt",
+        "edat": 21,
+        "nota": 7.2,
+        "assignatures": [
+            "Anglès",
+            "Matemàtiques"
+        ]
+    },
+    {
+        "nom": "AadSk",
+        "edat": 20,
+        "nota": 5.3,
+        "assignatures": [
+            "Geografia",
+            "Biologia"
+        ]
+    },
+    {
+        "nom": "RoZNK",
+        "edat": 22,
+        "nota": 5.0,
+        "assignatures": [
+            "Biologia",
+            "Informàtica"
+        ]
+    },
+    {
+        "nom": "Fzmbq",
+        "edat": 23,
+        "nota": 8.7,
+        "assignatures": [
+            "Química",
+            "Geografia"
+        ]
+    },
+    {
+        "nom": "TkVNE",
+        "edat": 29,
+        "nota": 5.7,
+        "assignatures": [
+            "Geografia",
+            "Física"
+        ]
+    },
+    {
+        "nom": "HHWcM",
+        "edat": 22,
+        "nota": 9.3,
+        "assignatures": [
+            "Història",
+            "Informàtica"
+        ]
+    },
+    {
+        "nom": "CcUuU",
+        "edat": 23,
+        "nota": 9.3,
+        "assignatures": [
+            "Economia",
+            "Química"
+        ]
+    },
+    {
+        "nom": "Sfbms",
+        "edat": 21,
+        "nota": 8.9,
+        "assignatures": [
+            "Física",
+            "Història"
+        ]
+    }
+]
+

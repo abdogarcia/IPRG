@@ -1,0 +1,45 @@
+site_name: "5. Programació estructurada. Control del flux en Python"
+
+nav:
+  - Inici: index.md
+  - Programació estructurada i algoritmes: 1.ProgramacioEstructurada.md
+  - Estructures condicionals: 2.Condicionals.md
+  - Bucles: 3.Bucles.md
+  - Patrons habituals dins dels bucles: 4.PatronsBucles.md
+  - Alteració del flux en els bucles: 5.BreakContinue.md
+  - Algoritmes bàsics: 6.AlgoritmesBasics.md
+  - Exercicis de repàs: 7.Exercicis.md
+
+theme:
+  name: 'material'
+  logo: '../img/logo.png'
+  favicon: '../img/logo.png'
+  features:
+    - content.code.copy
+  palette:
+    accent: deep purple
+    primary: amber
+
+extra_css:
+  - https://joamuran.net/curs24_25/css/material-just.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      baselevel: 2
+      toc_depth: 3
