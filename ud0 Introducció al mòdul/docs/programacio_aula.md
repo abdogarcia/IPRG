@@ -1,14 +1,28 @@
 <h1 style="display:none;"># Inici</h1>
 
-En aquest apartat trobarem concrecions a la programació didàctica:
+En este apartat es recullen alguns aspectes pràctics de la programació didàctica del mòdul.
 
-## **AVALUACIÓ**
+## Avaluació
 
-Depenent de la casuística de cada RA, l'avaluació podrà consistir en:
+La qualificació de cada avaluació es calcularà de la manera següent:
 
-* Proves pràctiques sobre el mateix RA, on la mitjana de les pràctiques valga un 100% del pes total d'eixe R.A.
-* Repartir el pes de la unitat mitjançant proves teòriques i pràctiques, on la prova teòrica (o la mitjana de les proves) tinga un pes d'un 80%, mentre que la part pràctica (o la mitjana de les proves pràctiques) tinga un pes final al R.A d'un 20%.
+- 90 %: prova o proves d’avaluació.
+- 10 %: exercicis, activitats o pràctiques realitzades durant l’avaluació.
 
-Per a cada R.A, a la unitat corresponent, s'especificarà el pes de cada prova i la manera d'avaluar eixe R.A.
+La qualificació final del mòdul es calcularà a partir de les dues avaluacions:
 
-Les dates d'avaluacions com les diferents proves a realitzar, es crearàn a AULES especificant les dates i hores concretes de la seua realització.
+- 1a avaluació: 40 %
+- 2a avaluació: 60 %
+
+Per a superar el mòdul serà necessari haver aprovat (nota major o igual a 5) cadascuna de **les dues avaluacions**.
+
+L’alumnat que no haja superat alguna de les avaluacions haurà de recuperar-la en l’**avaluació ordinària**.
+
+Si després de l’avaluació ordinària el mòdul continua sense estar superat, en l’**avaluació extraordinària** s’hauran de recuperar els continguts de tot el curs, no només de l'avaluació suspesa.
+
+## Comunicació entre alumnat i professorat
+
+Fora de l’aula, el canal habitual de comunicació serà Slack.
+
+A través d’esta plataforma es podran plantejar dubtes relacionats amb el mòdul, les activitats i les pràctiques, així com rebre avisos o informacions d’interés.
+
