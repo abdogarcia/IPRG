@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parent
 GLOBAL = ROOT / "_web_global"
 DOCS = GLOBAL / "docs"
 CONFIG = GLOBAL / "mkdocs.yml"
+CSS = DOCS / "stylesheets" / "extra.css"
 
 UNIT_RE = re.compile(r"^ud(\d+)\b", re.IGNORECASE)
 
@@ -253,6 +254,35 @@ def generate():
     included = []
     skipped = []
 
+    # CSS personalitzat per diferenciar visualment els nivells de títol.
+    CSS.parent.mkdir(parents=True, exist_ok=True)
+    CSS.write_text(
+        """
+.md-typeset h1 {
+    color: #555;
+    font-weight: 300;
+}
+
+.md-typeset h2 {
+    color: #1f3b8f;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.2em;
+}
+
+.md-typeset h3 {
+    color: #4f6190;
+    font-weight: 500;
+}
+
+.md-typeset h4 {
+    color: #555;
+    font-weight: 500;
+}
+""".strip() + "\\n",
+        encoding="utf-8",
+    ) 
+
     # Pàgina inicial global.
     index_lines = [
         "# Introducció a la Programació (IPRG)",
@@ -312,7 +342,8 @@ def generate():
             },
         },
         "extra_css": [
-            "https://joamuran.net/curs24_25/css/material-just.#css"
+            "https://joamuran.net/curs24_25/css/material-just.#css",
+            "stylesheets/extra.css",
         ],
         "plugins": ["search"],
         "markdown_extensions": [
