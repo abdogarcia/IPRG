@@ -1,8 +1,8 @@
 <h1 style="display:none;"># Inici</h1>
 
-# 6. Algoritmes bàsics
+# 7. Algoritmes bàsics
 
-## 6.1. Validar una dada
+## 7.1. Validar una dada
 
 Un patró molt habitual és **repetir la lectura fins que la dada siga vàlida**.
 
@@ -32,7 +32,7 @@ print("Nota correcta:", nota)
 
 29. Demana quina hora és (hores i minuts). Quan siga una hora vàlida, mostra el total de minuts transcorreguts des de les 0 hores.
 
-## 6.2. Menú repetitiu
+## 7.2. Menú repetitiu
 
 Els menús combinen normalment un `while` amb un `match`. El programa continua fins que l'usuari tria l'opció d'eixir.
 
@@ -76,7 +76,7 @@ while True:
 
 30. Programa que, repetidament, mostre un menú amb 4 opcions (**Demanar temperatura / Pujar 1 grau / Baixar 1 grau / Eixir**), que demane per teclat una opció i l'execute. Cada vegada que s'augmente o disminuïsca, també es mostrarà la nova temperatura. Després del bucle es mostrarà quantes vegades s'ha canviat la temperatura.
 
-## 6.3. Obtindre el major de molts números
+## 7.3. Obtindre el major de molts números
 
 Fins ara hem vist com obtindre el major de 2 o 3 números. Però com obtenim el major de 100 números? No podem tindre 100 variables i anar comparant-les.
 
@@ -111,6 +111,5 @@ print("Edat màxima:", maxima)
 
 Per a l’edat mínima seria el mateix procediment però canviant `>` per `<` i el nom de la variable `maxima` per `minima`.
 
-### Exercicis: càlcul del major i menor
-
-31. Llig uns quants números fins que posem el 0. Mostra el major, el menor i la mitjana (el 0 no l’ha de tindre en compte).
+!!! question "Càlcul del major i menor"
+    Llig uns quants números fins que posem el 0. Mostra el major, el menor i la mitjana (el 0 no l’ha de tindre en compte).

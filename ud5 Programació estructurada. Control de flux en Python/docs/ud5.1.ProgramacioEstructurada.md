@@ -47,14 +47,15 @@ Independentment del llenguatge que utilitzarem, podem descriure els passos que c
 ![Ordinograma de l'exemple del radi](img/image1.png){ width="430" }
 
 Un **ordinograma** és una representació gràfica d’un algoritme. Utilitza símbols units per fletxes per a indicar l’ordre d’execució. 
-Elements que té un ordinograma:
-- **Òval**: inici o final.
-- **Rectangle**: acció o càlcul.
-- **Paral·lelogram**: entrada o eixida de dades.
-- **Rombe**: condició o decisió.
-- **Fletxes**: indiquen el flux de l’algoritme.
 
-Els algoritmes se solen fer a mà, però hi ha aplicacions com [PSeInt](https://pseint.sourceforge.net/) (*Pseudocodi Interpretat*) que permeten construir un ordinograma o pseudocodi i executar-lo. L'exemple anterior està fet amb PSeInt.
+!!! note "Elements d'un ordinograma"
+    - **Òval**: inici o final.
+    - **Rectangle**: acció o càlcul.
+    - **Paral·lelogram**: entrada o eixida de dades.
+    - **Rombe**: condició o decisió.
+    - **Fletxes**: indiquen el flux de l’algoritme.
+
+Els ordinogrames se solen fer a mà, però hi ha aplicacions com [PSeInt](https://pseint.sourceforge.net/) (*Pseudocodi Interpretat*) que permeten construir-los i executar-los. L'exemple anterior està fet amb PSeInt.
 
 
 
@@ -75,15 +76,26 @@ si no
 
 És fer l’estructura que tindrà el programa però sense preocupar-nos del llenguatge de programació ni entrar en detalls.
 
+!!! note "avantatges del pseudocodi"
+    - Fàcil d’entendre per humans.
+    - Ajuda a planificar abans de programar.
+    - Independent del llenguatge de programació.
+
+
 Ens **inventem la sintaxi al nostre gust**.
 
 PSeInt pot servir per a construir i executar tant ordinogrames com pseudocodi. Tanmateix, una vegada entés el flux, treballarem directament amb Python.
 
-## 1.4. Qualitat d'un algoritme
+## 1.4. Propietats d’un bon algoritme
 
-- **Correctesa**: ha de donar el resultat esperat per a totes les dades d'entrada vàlides.
-- **Eficiència**: ha d'evitar treball innecessari i fer un ús raonable del temps i de la memòria.
-- **Senzillesa i claredat**: ha de ser fàcil d'entendre, comprovar i modificar.
+- **Correcte**: ha de donar el resultat esperat per a totes les dades d'entrada vàlides.
+
+- **Finit**: ha d'estar definit de manera que el procés puga acabar en algun moment.
+
+- **Clar i senzill**: els passos han de ser fàcils d'entendre, comprovar i modificar.
+
+- **Eficient**: ha d'evitar treball innecessari i fer un ús raonable del temps i la memòria.
+
 
 ## 1.5. De la seqüència al control del flux
 
@@ -96,4 +108,4 @@ edat = int(input("Edat: "))
 print(f"{nom} té {edat} anys")
 ```
 
-A partir d’ara aprendrem a **controlar el flux d’execució** del programa: podrem decidir quines instruccions s’han d’executar segons una condició i també repetir instruccions diverses vegades.
+A partir d’ara aprendrem a **controlar el flux d’execució** del programa: podrem decidir quines instruccions s’han d’executar segons una condició (if) i també repetir instruccions diverses vegades (while, for).

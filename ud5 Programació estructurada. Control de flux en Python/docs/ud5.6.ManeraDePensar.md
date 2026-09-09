@@ -1,116 +1,60 @@
 <h1 style="display:none;"># Inici</h1>
 
-# 6. Algoritmes bàsics
+# 6. La manera de pensar d’un programador
 
-## 6.1. Validar una dada
+Aprendre a programar no és sols dominar un llenguatge de programació, sinó **aprendre a pensar d’una forma estructurada i lògica** per a trobar solucions eficients a problemes complexos.
 
-Un patró molt habitual és **repetir la lectura fins que la dada siga vàlida**.
+## Característiques d’aquesta forma de pensar
 
-```text
-Demanar dada
+Sobretot en problemes extensos caldria aplicar:
 
-Mentre la dada és incorrecta:
-    Missatge d’error
-    Demanar dada
+- **Descomposició**: dividir un problema gran en parts més xicotetes i manejables.  
+- **Abstracció**: ignorar els detalls innecessaris i centrar-se en allò essencial.  
+- **Pensament lògic**: utilitzar raonaments clars i precisos per prendre decisions.  
+- **Creativitat**: trobar diferents camins per arribar a una solució.  
+- **Precisió**: expressar instruccions d’una manera que l’ordinador puga entendre sense ambigüitats.
 
-Treballar amb la dada correcta
-```
+## Exemple 
+Imaginem que volem fer un programa que indique quin és el nombre més gran d'una llista.
+Abans d'escriure codi, hem de pensar com ho faria qualsevol persona encara que no sabera programar, a partir d'una llista de números d'exemple:
 
-**Exemple:**
+![Algorisme major llista](img/algMajorLlista.png)
 
-```python
-nota = float(input("Nota (0-10): "))
+Una vegada hem pensat la solució, el següent pas és **transformar eixa idea en un algoritme**. 
 
-while nota < 0 or nota > 10:
-    print("Nota incorrecta.")
-    nota = float(input("Torna a introduir-la: "))
+En la solució que hem plantejat podem identificar:
 
-print("Nota correcta:", nota)
-```
-
-### Exercicis: validació de dada
-
-29. Demana quina hora és (hores i minuts). Quan siga una hora vàlida, mostra el total de minuts transcorreguts des de les 0 hores.
-
-## 6.2. Menú repetitiu
-
-Els menús combinen normalment un `while` amb un `match`. El programa continua fins que l'usuari tria l'opció d'eixir.
+- Un pas inicial: obtindre la llista i guardar el primer com a major.
+- Uns passos que es repeteixen per a cada element de la llista:
+    - Comparar-lo amb el major actual.
+    - Si és més gran, actualitzar el major.
+- Un pas final: mostrar eixe major.
+  
+Per tant, podem expressar aquestos passos en pseudocodi. Més avant vorem en detall instruccions d'assignació, bifurcació, repetició...
 
 ```text
-Mentre siga cert:
-    Mostrar menú
-    Demanar opció
+INICI
+    llista ← [7, 12, 3, 20, 5]
 
-    Segons l'opció:
-        Executar l'opció seleccionada
-        ...
-        Si és l'opció d'eixir:
-            Eixir del bucle
+    major ← llista[0]
+
+    Per cada nombre de llista fer
+        Si nombre > major llavors
+            major ← nombre
+        FiSi
+    FiPer
+
+    Escriu "El nombre major és: ", major
+FI
 ```
 
-És a dir:
+Això és el que fa un programador: **analitzar un problema i organitzar una seqüència de passos per a arribar a una solució**.
 
-```python
-while True:
-    print("1. Opció 1")
-    print("2. Opció 2")
-    ...
-    print("0. Eixir")
+Una vegada tenim l'algoritme, passar-lo a un programa consisteix principalment a expressar eixos mateixos passos amb la sintaxi del llenguatge de programació que utilitzem.
 
-    opcio = int(input("Tria una opció: "))
+---
 
-    match opcio:
-        case 1:
-            ...  # Accions de l’opció 1
+!!! question "Rreflexió final"
+    Donat un determinat problema, què creus que és més difícil: dissenyar l’algoritme o traduir-lo a un programa?  
 
-        case 2:
-            ...  # Accions de l’opció 2
-
-        ...
-
-        case 0:
-            break
-```
-
-### Exercicis: menú repetitiu
-
-30. Programa que, repetidament, mostre un menú amb 4 opcions (**Demanar temperatura / Pujar 1 grau / Baixar 1 grau / Eixir**), que demane per teclat una opció i l'execute. Cada vegada que s'augmente o disminuïsca, també es mostrarà la nova temperatura. Després del bucle es mostrarà quantes vegades s'ha canviat la temperatura.
-
-## 6.3. Obtindre el major de molts números
-
-Fins ara hem vist com obtindre el major de 2 o 3 números. Però com obtenim el major de 100 números? No podem tindre 100 variables i anar comparant-les.
-
-Imaginem que, sense cap ordinador, vull anar preguntant l'edat de tot l'alumnat per a poder saber l'edat màxima. Com ho faria? No he de recordar l'edat de tots (no he de guardar 100 edats en 100 variables), sinó que només necessite saber en cada moment **l'edat de l'alumne actual** i **l'edat màxima obtinguda fins eixe moment**.
-
-Per tant, necessite 2 variables: `edat` (per a guardar l'edat de l'alumne actual) i `maxima` (per a guardar l'edat màxima fins a eixe moment).
-
-L'algoritme seria:
-
-```text
-Inicialitzar maxima a la primera edat introduïda
-
-Per cadascun dels altres alumnes:
-    Demanar l'edat de l'alumne
-    Si eixa edat és major que maxima:
-        Canviar maxima a eixa edat
-```
-
-En Python:
-
-```python
-maxima = int(input("Edat:"))
-
-for i in range(99):
-    edat = int(input("Edat:"))
-
-    if edat > maxima:
-        maxima = edat
-
-print("Edat màxima:", maxima)
-```
-
-Per a l’edat mínima seria el mateix procediment però canviant `>` per `<` i el nom de la variable `maxima` per `minima`.
-
-### Exercicis: càlcul del major i menor
-
-31. Llig uns quants números fins que posem el 0. Mostra el major, el menor i la mitjana (el 0 no l’ha de tindre en compte).
+**Recorda**: La millor forma d'aprendre a programar és programant.
