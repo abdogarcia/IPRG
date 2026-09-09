@@ -32,4 +32,4 @@ En esta unitat passarem de programes que simplement executen instruccions de dal
 6. Algoritmes bàsics
 7. Exercicis de repàs
 
-[Comencem!](1.ProgramacioEstructurada.md){ .md-button .centrat }
+[Comencem!](ud5.1.ProgramacioEstructurada.md){ .md-button .centrat }
