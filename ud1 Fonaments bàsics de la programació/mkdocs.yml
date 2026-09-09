@@ -1,0 +1,8 @@
+site_name: IPRG — UD1. Fonaments bàsics de la programació
+
+theme:
+  name: material
+
+nav:
+  - Inici: index.md
+  - Fonaments bàsics de la programació: ud1.1.FonamentsPRG.md
