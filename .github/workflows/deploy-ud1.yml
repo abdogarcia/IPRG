@@ -1,4 +1,4 @@
-name: Publicar UD1
+name: Publicar web IPRG
 
 on:
   push:
@@ -23,21 +23,20 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Instal·lar MkDocs i Material
+      - name: Instal·lar dependències
         run: |
-          pip install mkdocs-material
+          pip install mkdocs-material pyyaml
 
-      - name: Generar web
-        working-directory: ud1 Fonaments bàsics de la programació
-        run: mkdocs build
+      - name: Generar web global
+        run: python3 web_iprg.py --generate-only
 
-      - name: Configurar Pages
+      - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Pujar artefacte
+      - name: Pujar web
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ud1 Fonaments bàsics de la programació/site
+          path: _web_global/site
 
   deploy:
     environment:

@@ -1,1 +1,0 @@
-../../../ud0 Introducció al mòdul/docs/about.md

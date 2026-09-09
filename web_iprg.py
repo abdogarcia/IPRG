@@ -36,6 +36,9 @@ CONFIG = GLOBAL / "mkdocs.yml"
 
 UNIT_RE = re.compile(r"^ud(\d+)\b", re.IGNORECASE)
 
+# Unitats que es publicaran en la web global. Per exemple, {0, 1, 2} per a ud0, ud1 i ud2.
+PUBLISHED_UNITS = {1}
+
 # Fitxers que no té sentit copiar/enllaçar a la web global.
 EXCLUDED_SUFFIXES = {
     ".docx", ".odt", ".zip", ".DS_Store",
@@ -263,6 +266,10 @@ def generate():
     for number, unit, content in units:
         label = unit_label(unit, number)
 
+        if number not in PUBLISHED_UNITS:
+            skipped.append(label + " (no publicada)")
+            continue
+
         if content is None:
             skipped.append(label)
             continue
@@ -305,7 +312,7 @@ def generate():
             },
         },
         "extra_css": [
-            "https://joamuran.net/curs24_25/css/material-just.css"
+            "https://joamuran.net/curs24_25/css/material-just.#css"
         ],
         "plugins": ["search"],
         "markdown_extensions": [
@@ -330,7 +337,7 @@ def generate():
             },
             {
                 "toc": {
-                    "baselevel": 2,
+                    "baselevel": 1,
                     "toc_depth": 3,
                 }
             },

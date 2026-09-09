@@ -1,1 +1,0 @@
-../../../ud1 Introducció a la programació/1_IntroPRG.md

@@ -1,1 +1,0 @@
-../../../ud0 Introducció al mòdul/docs/programacio_aula.md
