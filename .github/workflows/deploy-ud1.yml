@@ -29,7 +29,10 @@ jobs:
 
       - name: Generar web global
         run: python3 web_iprg.py --generate-only
-
+      
+      - name: Construir web
+        run: python3 -m mkdocs build -f _web_global/mkdocs.yml
+        
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
