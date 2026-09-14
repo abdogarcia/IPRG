@@ -38,7 +38,7 @@ CSS = DOCS / "stylesheets" / "extra.css"
 UNIT_RE = re.compile(r"^ud(\d+)\b", re.IGNORECASE)
 
 # Unitats que es publicaran en la web global. Per exemple, {0, 1, 2} per a ud0, ud1 i ud2.
-PUBLISHED_UNITS = {0,1,2}
+PUBLISHED_UNITS = {0,1,2,5}
 
 # Fitxers que no té sentit copiar/enllaçar a la web global.
 EXCLUDED_SUFFIXES = {
