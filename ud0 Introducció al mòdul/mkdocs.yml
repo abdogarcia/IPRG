@@ -2,13 +2,9 @@ site_name: Introducció a la Programació (IPRG)
 site_url: https://abeneto.github.io/IPRG_2526
 
 nav:
-  - Mòdul Introducció a la Programació: index.md
-  - 1. Fonaments de la Programació:  u1
-  - 2. Estructures de Control i Depuració: u2
-  - 3. E/S i Gestió de Dades: u3
-  - 4. Matrius, Operacions Agregades i Expressions Regulars: u4
-  - Sobre...: about.md
-
+  - Inici: index.md
+  - 1. Programació d'Aula: ud0.1.ProgramacioAula.md
+  - 2. Introducció al mòdul: ud0.2.IntroduccioModul.md
 
 theme:
   name: 'material'

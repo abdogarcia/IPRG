@@ -18,13 +18,12 @@ hide:
   }
 </style>
 
-# Introducció al mòdul
+# Fonaments bàsics de la programació
 
-En esta unitat es presenta el mòdul d’**Introducció a la Programació**, la seua organització i els aspectes bàsics de la programació d’aula.
+En esta unitat introduirem els **conceptes fonamentals de la programació** i els principals tipus de llenguatges de programació.
 
 ## Continguts
 
-1. Programació d'Aula
-2. Introducció al mòdul
+1. Fonaments bàsics de la programació
 
-[Comencem!](ud0.1.ProgramacioAula.md){ .md-button .centrat }
+[Comencem!](ud1.1.FonamentsPRG.md){ .md-button .centrat }

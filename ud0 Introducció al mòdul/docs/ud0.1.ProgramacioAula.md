@@ -1,6 +1,6 @@
 <h1 style="display:none;"># Inici</h1>
 
-# Programació d'Aula
+# 1. Programació d'Aula
 
 En este apartat es recullen alguns aspectes pràctics de la programació didàctica del mòdul.
 
