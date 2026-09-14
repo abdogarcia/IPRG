@@ -1,22 +1,32 @@
-# 2. Les dades
+---
+hide:
+  - navigation
+  - toc
+---
 
-## 2.1 Introducció
+<style>
+  .centrat{
+    background-color: var(--md-accent-fg-color);
+    color: #ffffff !important;
+    text-align: center !important;
+    display: block !important;
+    width: 200px !important;
+    margin: 0 auto !important;
+  }
+  body{
+    background-image: none !important;
+  }
+</style>
 
-Un programa és una seqüència d’instruccions que **manipulen unes dades per a obtindre uns resultats**.
+# Les dades
 
-**DADES → PROGRAMA → RESULTATS**
+En esta unitat estudiarem les dades que tracten els programes: **com es guarden i quines operacions podem fer amb elles**.
 
-Les instruccions d’un programa són ordres que donem a l’ordinador. Internament, l’ordinador treballa amb **llenguatge màquina**, format per seqüències de `0` i `1`. Tota la informació que emmagatzema —números, text, imatges, música, jocs, pel·lícules...— acaba representant-se d’aquesta manera.
+## Continguts
 
-![Diferents tipus d'informació representats en binari](imatges/dades_binari.png)
+1. Introducció
+2. Variables
+3. Operadors i expressions
+4. Exercicis
 
-Com que escriure directament en llenguatge màquina seria molt difícil per a nosaltres, utilitzem **llenguatges de programació**. En aquest mòdul treballarem amb **Python**.
-
-En aquest tema estudiarem les dades que tracten els programes: **com es guarden i quines operacions podem fer amb elles**. Molts dels conceptes que veurem són comuns a altres llenguatges de programació.
-
-!!! info "En aquest tema"
-    Veurem tres idees principals:
-
-    - què és una dada i com es guarda en una **variable**;
-    - què és una **expressió**;
-    - quins **operadors** podem utilitzar i en quin ordre s’avaluen.
+[Comencem!](ud2.1.Introduccio.md){ .md-button .centrat }

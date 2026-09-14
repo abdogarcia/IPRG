@@ -1,4 +1,4 @@
-# 2.3 Operadors i expressions
+# 3. Operadors i expressions
 
 Podem fer operacions amb les dades d’un programa: sumar-les, comparar-les, combinar condicions, treballar amb text, etc.
 
@@ -15,7 +15,7 @@ edat < 18
 
 Els **operadors** són els símbols o paraules que indiquen l’operació que volem realitzar. En este tema vorem principalment operadors **aritmètics**, **relacionals** i **lògics**.
 
-## 2.3.1 Operadors aritmètics
+## 3.1. Operadors aritmètics
 
 S’utilitzen per a fer operacions matemàtiques amb dades numèriques.
 
@@ -63,7 +63,7 @@ Ara el resultat és:
 !!! tip
     Davant del dubte, utilitzar parèntesis fa que l’expressió siga més clara i evita errors.
 
-## 2.3.2. Operadors de cadenes
+## 3.2. Operadors de cadenes
 
 En les cadenes de text podem usar alguns operadors específics:
 
@@ -72,7 +72,7 @@ En les cadenes de text podem usar alguns operadors específics:
 "Ha" * 3          # "HaHaHa"
 ```
 
-## 2.3.3 Operadors relacionals
+## 3.3. Operadors relacionals
 
 Serveixen per **comparar dos valors o expressions**. El resultat d’una comparació sempre és un valor lògic: `True` o `False`.
 
@@ -109,7 +109,7 @@ També podem comparar caràcters i cadenes de text:
 'a' == 'A'     # False
 ```
 
-## 2.3.4 Operadors lògics
+## 3.4. Operadors lògics
 
 Els principals operadors lògics de Python són `not`, `and` i `or`. Treballen amb expressions lògiques i produeixen com a resultat `True` o `False`.
 
@@ -184,7 +184,7 @@ Algunes expressions amb `not` es poden escriure d’una manera més simple:
     ```
     És a dir: quan neguem una comparació, canvia l’**operador relacional**, però NO les operacions aritmètiques que hi haja dins.
 
-## 2.3.5 Lleis de De Morgan
+## 3.5. Lleis de De Morgan
 
 Les **lleis de De Morgan** permeten transformar expressions lògiques, especialment quan un `not` afecta una expressió formada amb `and` o `or`.
 
@@ -274,7 +274,7 @@ I ja estaria, encara que podem llevar parèntesis innecessaris:
 not plou or fred or not sol or not humitat
 ```
 
-## 2.3.6 Prioritat dels operadors
+## 3.6. Prioritat dels operadors
 
 Quan en una mateixa expressió apareixen operadors aritmètics, relacionals i lògics, Python els avalua segons una prioritat.
 

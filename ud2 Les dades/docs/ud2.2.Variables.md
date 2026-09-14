@@ -1,4 +1,4 @@
-# 2.2 Variables
+# 2. Variables
 
 Una **dada** és qualsevol informació amb la qual treballa un programa.
 

@@ -1,4 +1,4 @@
-# Exercicis
+# 4. Exercicis
 
 ## 1. Avaluació d’expressions
 
