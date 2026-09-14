@@ -198,7 +198,22 @@ def build_nested_nav(md_files: list[Path], content_root: Path, url_prefix: str):
 
         for f in files:
             rel = f.relative_to(content_root).as_posix()
-            items.append({page_title(f): f"{url_prefix}/{rel}"})
+            target = f"{url_prefix}/{rel}"
+
+            # Amb Material + navigation.indexes, si l'index.md és el primer
+            # element d'una secció i apareix com una ruta simple (sense títol
+            # propi), la mateixa secció es converteix en l'enllaç a l'índex.
+            # Així evitem repetir, per exemple:
+            #   UD2 — Les dades
+            #       Les dades
+            #       1. Introducció
+            # i queda directament:
+            #   UD2 — Les dades   <- clicable i obri index.md
+            #       1. Introducció
+            if f.name.lower() == "index.md":
+                items.append(target)
+            else:
+                items.append({page_title(f): target})
 
         folders = sorted(
             (k for k in node if k != "__files__"),
@@ -335,7 +350,10 @@ def generate():
         "theme": {
             "name": "material",
             "language": "ca",
-            "features": ["content.code.copy"],
+            "features": [
+                "content.code.copy",
+                "navigation.indexes",
+            ],
             "palette": {
                 "accent": "deep purple",
                 "primary": "amber",
