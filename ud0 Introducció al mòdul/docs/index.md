@@ -1,24 +1,4 @@
----
-hide:
-  - navigation
-  - toc
----
-
-<style>
-  .centrat{
-    background-color: var(--md-accent-fg-color);
-    color: #ffffff !important;
-    text-align: center !important;
-    display: block !important;
-    width: 200px !important;
-    margin: 0 auto !important;
-  }
-  body{
-    background-image: none !important;
-  }
-</style>
-
-# Introducció al mòdul
+# UD0. Introducció al mòdul
 
 En esta unitat es presenta el mòdul d’**Introducció a la Programació**, la seua organització i els aspectes bàsics de la programació d’aula.
 
@@ -27,4 +7,4 @@ En esta unitat es presenta el mòdul d’**Introducció a la Programació**, la 
 1. Programació d'Aula
 2. Introducció al mòdul
 
-[Comencem!](ud0.1.ProgramacioAula.md){ .md-button .centrat }
+

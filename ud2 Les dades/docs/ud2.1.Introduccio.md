@@ -6,7 +6,7 @@ Un programa és una seqüència d’instruccions que **manipulen unes dades per 
 
 Les instruccions d’un programa són ordres que donem a l’ordinador. Internament, l’ordinador treballa amb **llenguatge màquina**, format per seqüències de `0` i `1`. Tota la informació que emmagatzema —números, text, imatges, música, jocs, pel·lícules...— acaba representant-se d’aquesta manera.
 
-![Diferents tipus d'informació representats en binari](imatges/dades_binari.png)
+![Diferents tipus d'informació representats en binari](img/dades_binari.png)
 
 Com que escriure directament en llenguatge màquina seria molt difícil per a nosaltres, utilitzem **llenguatges de programació**. En aquest mòdul treballarem amb **Python**.
 

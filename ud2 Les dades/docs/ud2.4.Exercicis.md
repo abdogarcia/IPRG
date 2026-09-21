@@ -23,7 +23,7 @@ l) 'a' == 'A'
 
 Construeix expressions correctes per a representar les fórmules següents:
 
-![Fórmules per convertir en expressions](imatges/formules_exercici.png)
+![Fórmules per convertir en expressions](img/formules_exercici.png)
 
 ## 3. Expressions lògiques
 

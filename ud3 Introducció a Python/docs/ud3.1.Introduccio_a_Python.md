@@ -1,4 +1,4 @@
-# Introducció a Python
+# UD3. Introducció a Python
 ![](img/logo_python.png){: style="display: block; margin-left: auto; margin-right: auto; width: 200px;" }
 ## 1. Què és Python?
 
@@ -57,13 +57,13 @@ Tot i això, utilitzarem un IDE per a facilitar el procés de programació.
 
 ---
 
-## 3. Entorns de desenvolupament
+## 3. Entorns de desenvolupament (IDE)
 
-Encara que podríem escriure els programes amb qualsevol editor de text i executar-los des del terminal, és més còmode utilitzar un **IDE**.
+Encara que podríem escriure els programes amb qualsevol editor de text i executar-los des del terminal, és més còmode utilitzar un **IDE**. En este mòdul usarem els IDEs `Thonny` i `Visual Studio Code`.
 
 ### Thonny
 
-En este mòdul començarem amb **Thonny**, un entorn pensat especialment per a persones que estan començant a programar amb Python.
+Començarem usant **Thonny** ja que és un entorn per a Python pensat especialment per a persones que estan ensenyant-se a programar.
 
 ![Thonny](img/thonny.png)
 
@@ -109,7 +109,7 @@ Per a treballar amb Python en VS Code, cal instal·lar l’extensió de Python. 
 
 Les **biblioteques** proporcionen funcionalitats que podem reutilitzar als nostres programes.
 
-Podem distingir dos tipus principals:
+Podem distingir dos tipus de biblioteques: `estàndard` i `externes`
 
 ### Biblioteques estàndard
 
@@ -121,13 +121,17 @@ Alguns exemples són:
 - `random`, per a generar valors aleatoris;
 - `datetime`, per a treballar amb dates i hores.
 
-Per a utilitzar-les només cal importar-les:
+Per a utilitzar-les només cal **importar-les**:
 
-```python
-import math
+!!! example "Exemple d'ús de la biblioteca estàndard `math`"
+    La necessitarem si volem usar funcions matemàtiques com l'arrel quadrada (`sqrt`).
+    ```python
+    import math
 
-print(math.sqrt(25))
-```
+    ...
+
+    print(math.sqrt(25))   # Mostrarà 5
+    ```
 
 ### Biblioteques externes
 
@@ -138,29 +142,13 @@ Alguns exemples són:
 - `colorama`, per a posar colors i estils al text del terminal;
 - `requests`, per a fer peticions HTTP.
 
-Per a instal·lar-les utilitzem **pip**, el gestor de paquets de Python.
-
-!!! note El gestor de paquets de Python (*pip*)
-    Python sol incloure `pip`, però en algunes distribucions de Linux pot ser necessari instal·lar-lo.
-
-    Per a comprovar si està instal·lat:
-
-    ```bash
-    python3 -m pip --version
-    ```
-
-    Si no està instal·lat en Ubuntu:
-
-    ```bash
-    sudo apt install python3-pip
-    ```
-
-Per tant, per a usar una biblioteca externa cal:
+Per a utilitzar una biblioteca externa cal:
 
 1. **Instal·lar-la** una vegada amb `pip`.
 2. **Importar-la** en cada programa que la necessite.
 
-!!! example Exemple amb `colorama`
+!!! example Exemple d'ús de la biblioteca externa `colorama`
+    La necessitarem si volem usar colors.
 
     Primer instal·lem la biblioteca des del terminal:
 
@@ -168,16 +156,34 @@ Per tant, per a usar una biblioteca externa cal:
     python3 -m pip install colorama
     ```
 
-    En Thonny també podem instal·lar-la des de **Eines → Gestiona els paquets**.
+    !!! note ""
+        En Thonny també podem instal·lar-la des de **Eines → Gestiona els paquets**.
 
     Després, la importem en el programa:
 
     ```python
     import colorama
 
+    ...
+
     print(colorama.Fore.RED + "Text en roig")
     ```
 
+
+!!! note El gestor de paquets de Python (*pip*)
+    En algunes distribucions de Linux potser Python no incloga el `pip`. Per a comprovar si està instal·lat:
+
+    ```bash
+    python3 -m pip --version
+    ```
+ 
+    Si no està instal·lat:
+
+    ```bash
+    sudo apt install python3-pip
+    ```
+
 ---
+
 
 Ara ja tenim Python i l'entorn de treball preparats per a començar a programar.

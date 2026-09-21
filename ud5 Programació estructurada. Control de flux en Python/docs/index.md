@@ -1,24 +1,4 @@
----
-hide:
-  - navigation
-  - toc
----
-
-<style>
-  .centrat{
-    background-color: var(--md-accent-fg-color);
-    color: #ffffff !important;
-    text-align: center !important;
-    display: block !important;
-    width: 200px !important;
-    margin: 0 auto !important;
-  }
-  body{
-    background-image: none !important;
-  }
-</style>
-
-# Programació estructurada. Control del flux en Python
+# UD5. Programació estructurada. Control del flux en Python
 
 En esta unitat passarem de programes que simplement executen instruccions de dalt cap a baix a programes capaços de **prendre decisions i repetir accions**.
 

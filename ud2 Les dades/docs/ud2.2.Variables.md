@@ -13,7 +13,7 @@ Cada dada és d’un **tipus** determinat. Alguns dels tipus més habituals són
 
 Les dades d’un programa es poden guardar en **variables**. Una variable és com una caixa a la qual posem un nom i en la qual podem guardar un valor.
 
-![Variable edat amb el valor 17](imatges/variable_edat.png)
+![Variable edat amb el valor 17](img/variable_edat.png)
 
 En la imatge, la variable `edat` guarda el valor `17`. Aquest valor pot canviar durant l’execució del programa.
 
