@@ -19,13 +19,13 @@ k) "Hola, món!" == "Hola," + "món!"
 l) 'a' == 'A'
 ```
 
-## 2. Construcció d’expressions
+## 2. Construcció d’expressions matemàtiques
 
-Construeix expressions correctes per a representar les fórmules següents:
+Indica com s'escriurien en Python estes expressions. Recorda posar els parèntesis necessaris.
 
 ![Fórmules per convertir en expressions](img/formules_exercici.png)
 
-## 3. Expressions lògiques
+## 3. Avaluació d'expressions lògiques
 
 A partir de les variables següents:
 
@@ -35,7 +35,7 @@ redo = True
 suau = False
 ```
 
-indica quin serà el valor de les expressions:
+indica quin serà el valor de les expressions lògiques:
 
 ```python
 a) gran and not redo
@@ -57,7 +57,7 @@ c) not ((a == b) or (a < b))
 d) not (not (a != b) or (a + b == 7))
 ```
 
-## 5. Seguiment de variables
+## 5. Seguiment del valor de les variables
 
 Indica què valdrà cada variable després de cadascuna de les assignacions d’aquest programa:
 
@@ -79,18 +79,44 @@ El primer està resolt com a exemple.
 
 a) El valor de `a` és més del doble que el de `b`.
 
-    ```python
-    a > 2 * b
-    ```
+```python
+a > 2 * b
+```
 
 b) `a` és major que `b` però menor que `c`.
+
 c) Els valors de `b` i `c` són majors o iguals que `d`.
+
 d) `a`, `b` i `c` són idèntics.
+
 e) `a`, `b` i `c` són idèntics però diferents de `d`.
-f) `b` té un valor comprés entre `a` i `c`, i `a` és menor que `c`.
+
+f) `b` té un valor comprés entre `a` i `c`; i `a` és menor que `c`.
+
 g) `b` té un valor comprés entre `a` i `c`.
+
 h) Almenys dos dels valors `a`, `b` i `c` són iguals.
 
 ## 7. Construcció d'expressions
-a) Pep i Pepa han nascut el mateix any. El dia i el mes de naixement de Pep estan guardats en les variables `diaPep` i `mesPep`, i els de Pepa en `diaPepa` i `mesPepa`. Construeix una expressió lògica que indique que **Pep és més jove que Pepa**.
-b) Quina seria l'expressió si també tenim en compte els anys de naixement (`anyPep` i `anyPepa`)?
+A l'hora del pati la conserge està a la porta de l'institut i demana el carnet de cada estudiant per a saber si pot eixir o no. Volem construir una expressió que ens permeta comprovar si un alumne és major d'edat.
+Quina condició caldria posar en el següent programa?
+
+```python
+# Demanem la data actual:
+diaA = int(input("Dia actual: "))
+mesA = int(input("Mes actual: "))
+anyA = int(input("Any actual: "))
+
+# Demanem la data de naixement de l'alumne:
+diaN = int(input("Dia de naixement: "))
+mesN = int(input("Mes de naixement: "))
+anyN = int(input("Any de naixement: "))
+
+# Comparem dates i mostrem el resultat corresponent:
+if ________________________________________________________________ :
+    print("És major d'edat")
+else:
+    print("No és major d'edat")
+```
+
+
