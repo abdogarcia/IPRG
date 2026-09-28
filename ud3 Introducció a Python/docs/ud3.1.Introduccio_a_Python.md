@@ -30,7 +30,7 @@ A continuació vorem com instal·lar-ho tot.
 
 ---
 
-## 2. Instal·lar Python
+## 2. Instal·lació de Python
 
 Python ja està preinstal·lat en moltes distribucions de Linux. Podem comprovar si està instal·lat obrint un terminal i escrivint:
 

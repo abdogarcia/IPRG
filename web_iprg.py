@@ -38,7 +38,7 @@ CSS = DOCS / "stylesheets" / "extra.css"
 UNIT_RE = re.compile(r"^ud(\d+)\b", re.IGNORECASE)
 
 # Unitats que es publicaran en la web global. Per exemple, {0, 1, 2} per a ud0, ud1 i ud2.
-PUBLISHED_UNITS = {0,1,2,3}
+PUBLISHED_UNITS = {0,1,2,3,4,5}
 
 # Fitxers que no té sentit copiar/enllaçar a la web global.
 EXCLUDED_SUFFIXES = {
@@ -287,12 +287,43 @@ def generate():
 
 .md-typeset h3 {
     color: #4f6190;
+    font-size: 1.25rem;
     font-weight: 500;
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
 }
 
 .md-typeset h4 {
-    color: #555;
-    font-weight: 500;
+    color: #444;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+/* Numeració contínua dels exercicis */
+.md-content {
+    counter-reset: exercici;
+}
+
+.md-typeset .admonition.question ol,
+.md-typeset details.question ol {
+    list-style: none;
+    padding-left: 2.2em;
+}
+
+.md-typeset .admonition.question ol > li,
+.md-typeset details.question ol > li {
+    counter-increment: exercici;
+    position: relative;
+}
+
+
+.md-typeset .admonition.question ol > li::before,
+.md-typeset details.question ol > li::before {
+    content: counter(exercici) ".";
+    position: absolute;
+    left: -2em;
 }
 """.strip() + "\\n",
         encoding="utf-8",

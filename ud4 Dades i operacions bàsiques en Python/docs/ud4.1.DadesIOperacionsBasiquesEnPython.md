@@ -65,13 +65,9 @@ Els tipus de Python són:
 !!! example "Exemple dels tipus de les variables"
     Les variables seran del tipus del valor que se li assignen:
     ```python
-
     edat = 30           # int
-
     pes = 74.5          # float (s'usa és el punt decimal, no la coma)
-
     nom = "Pep Garcia"  # str (també pot anar entre cometes simples)
-
     casat = True        # bool 
     ```
 
@@ -96,19 +92,12 @@ Python usa **tipificació dinàmica**: una variable pot canviar de tipus en un p
     Veiem com en un programa una variable pot canviar de tipus:
     ```python
     ...
-
     n = 7     # Primera vegada que ix la variable n. Ara la n val 7 Per tant, és int.
-
     n = 5.67  # Ara n val 5.67. Per tant, ara és float.
-
     n = 9     # Ara n val 9. Per tant, continua sent int.
-
     n = n+2   # Ara n 11. Continua sent int.
-
     n = n/4   # Ara n val 2.75. Per tant, ara n és float.
-
     n = "Pep" # Ara n és str (cadena)
-
     ...
     ```
 
@@ -187,6 +176,22 @@ Operadors de Python ordenats de major a menor prioritat dins d’una expressió.
 </table>
 Els parèntesis poden utilitzar-se per a modificar l’ordre d’avaluació.
 
+!!! question "Exercici sobre operadors de Python"
+
+    1. Digues què mostrarà exactament cada *print*:
+    ```python
+    print(14 / 4)
+
+    print(14 // 4)
+
+    print(14 % 4)
+
+    print(14 <= 4)
+
+    print(14 - -4)
+    ```
+     2. Escriu una expressió on s’especifique que una variable numèrica de nom *quant* siga menor o igual que 500, múltiple de 5 o de 3 i distinta de 100.
+   
 ### Operador d'assignació
 
 Este operador ja ha aparegut en molts exemples. S'utilitza quan volem assignar un valor a una variable.
@@ -195,11 +200,8 @@ Este operador ja ha aparegut en molts exemples. S'utilitza quan volem assignar u
     Recordem que a l'esquerra es posa la variable on volem guardar el valor, desrpés el `=` i després el valor que volem guardar.
     ```python
     x = 10        # x ara valdrà 10
-
     y = 20        # y ara valdrà 20
-
     x = y/2 + 3   # x ara ja no valdrà 10, sinó 13.0
-
     y = x + y//2  # y ara ja no valdrà 20, sinó 23.0
     ```
 
@@ -221,7 +223,7 @@ Els operadors `+=` i `-=` permeten modificar el valor d'una variable utilitzant 
 
 Així evitem repetir el nom de la variable.
 
-!!! example "Exemple d'ús d'operadors reduïts"
+!!! example "Exemples d'ús d'operadors reduïts"
 
     ```python
     x = 7
@@ -239,9 +241,9 @@ Així evitem repetir el nom de la variable.
 
 Altres operadors d’assignació reduïts (no tan freqüents): `*=`, `/=`, `//=`, `%=`, `**=`
 
-!!! question "Exercici sobre operadors"
+!!! question "Exercici sobre assignacions en Python"
 
-    1\. En el següent programa Python, què valdrà la variable `a` després de cada assignació?
+    3. En el següent programa, què valdrà la variable `a` després de cada assignació?
     ```python
 
     a = 6
@@ -254,9 +256,6 @@ Altres operadors d’assignació reduïts (no tan freqüents): `*=`, `/=`, `//=`
     
     a -= 2 + b        # a =
     
-    a = b // a + 1    # a =
-    
-    a = 10 % 3        # a =
     ```
 
 ## 4. Expressions
@@ -268,29 +267,20 @@ A vegades convindrà canviar el tipus d'una expressió. Veiem per què i com fer
 
 Si ens convé, podem convertir el tipus d’una expressió a un altre tipus:
 
-> int( expressió )
->
-> float( expressió )
->
-> str( expressió )
->
-> bool( expressió)
+- int( expressió )
+- float( expressió )
+- str( expressió )
+- bool( expressió )
 
 !!! example "Exemples de càsting"
     El càsting pot afectar a una variable o a una expressió:
     ```python
     x = 4.6
-
     n = int(x) * 2     # n = int(4.6) * 2   --> n = 4 * 2     --> n = 8
-
     n = int(x * 2)     # n = int(4.6 * 2)   --> n = int(9.2)  --> n = 9
-
     euros = 10
-
     print( int(euros * 166.386) ) # Mostrarà 1663 (lleva la part decimal)
-
     telefon = 961702294 # Ara telefon és enter. Podríem sumar-li números, etc.
-
     telefon = str(telefon)  # Ara telefon és una cadena (“961702294”). Podríem concatenar, etc.
     ```
 
@@ -298,553 +288,447 @@ Si ens convé, podem convertir el tipus d’una expressió a un altre tipus:
     ```python
 
     num = 20
-
     domicili = "C/ Sequial, número " + num       # Error: + no uneix text amb números
-
     domicili = "C/ Sequial, número " + str(num)  # Cal usar càsting
     ```
 
-!!! question "Exercicis sobre expressions i tipus"
+!!! question "Exercicis sobre càsting"
 
-    2\. Indica què mostrarà en cada *print*
+    4. Indica què mostraran els *print*
 
     ```python
-    a = 12
     x = 2.5
     y = 0.6
-   
-    # a)
-    print(x + y)
-
-    # b)
+    preu = "12 €"
+    altura = "1,79"
+ 
     print(int(x) + int(y))
 
-    # c)
     print(int(x + y))
 
-    # d)
-    print(a / 4)
+    print(int(preu))
 
-    # e)
-    print(a // 4)
+    print(float(altura))
 
-    # f)
-    print(a % 4)
 
-    # g)
-    print(a / a - 2)
-
-    # h)
-    print(a-2 ** 2)
-
-    # i)
-    print(a < x or y < x)
-
-    # j)
-    print(not (a < x))
-
-    # k)
-    print(a >= x) and (y <= a))
     ```
 
-## 5. Eixida de dades: *print*
+## 5. Eixida de dades: `print`
 
-Ja hem vist que el print s’usa per a mostrar dades per pantalla. Ara
-entrarem en detall.
+Ja hem vist que en el *print* li podem posar diferents valors separats per comes.
 
-Exemples:
-
+```python
 nom = "Pep"
-
 cog = "Garcia"
+print("Hola", nom, cog) 
+print("Fi del programa")
+```
 
-print("Hola,", nom, cog) \# 3 arguments. Mostra: Hola, Pep Garcia
+L'eixida per pantalla serà:
+```text
+Hola Pep Garcia
+Fi del programa
+```
 
-print("Hola," + nom + cog) \# 1 argument (textos units). Mostra:
-Hola,PepGarcia
+És a dir, un print:
 
-Com podem vore, el print:
+- Mostra en la mateixa línia els distints valors, separats per un espai.
+- El següent print mostra les dades en altra línia.
 
-- Pot rebre una o més dades com a arguments (separats per comes).
-
-- Mostra els arguments separats per 1 espai.
-
-- Al final posa automàticament un salt de línia (és a dir, el *print*
-  següent el mostra en altra línia).
-
-
+I si no volem que els separe per un espai? I si no volem que passe a la línia següent? I si no volem que les dades es mostren per pantalla sinó que es guarden en un fitxer? Veiem com fer-ho.
 
 ### Altres paràmetres del *print*
 
-*print*(objecte/s, ***sep***=separador, ***end***=finalitzador,
-***file***=fitxer)
+Al print li podem indicar el comportament, a més dels objectes que volem mostrar:
 
-- **objecte/s** → textos, números, variables o expressions que volem
-  mostrar (separats per comes)
+*print*(objectes, ***sep***=separador, ***end***=finalitzador, ***file***=fitxer)
 
+- En la primera part del print està la llista d'objectes que volem mostrar (el que hem fet fins ara): textos, números, variables o expressions que volem mostrar (separats per comes).
+```python
 dies = 3
+print("En", dies, "dies hi ha", dies*24, "hores")  # En 3 dies hi ha 72 hores
+```
 
-print("En", dies, "dies hi ha", dies\*24, "hores") \# en 3 dies hi ha 72
-hores
+- ***sep***=separador
+  Hem vist que el *print* mostra els valors que li passem separats per un espai. Si en compte de l'espai volem posar altra cosa, hem d'usar el `sep`. 
+```python
+any = 2026
+mes = 9
+dia = 25
+print(dia, mes, any)                # 25 9 2026
+print(dia, mes, any, sep="/")       # 25/9/2026
+print(dia, mes, any, sep=" del ")   # 25 del 9 del 2026
+print(dia, mes, any, sep="")        # 2592026
+```
 
-- ***sep***=separador → Ací indicarem amb una cadena de caràcters com
-  volem que apareguen separats els objectes que mostrem. Si no posem
-  res, el separador és un espai en blanc.
+- ***end***=finalitzador
+  Hem vist que el *print* fa un salt de línia (intro) quan acaba de mostrar els seus valors (cada print el mostra en una línia diferent). Si no volem que faça eixe intro, hem d'usar l'`end`.
+```python
+print("Preu: ", end="")   # Mostra "Preu:" però NO fa un intro
+print(25, end=" € ")      # Mostra 25 i després la cadena " € " però NO fa intro
+print("amb IVA")          # És com si tinguera end='\n'. Per tant, sí que fa intro
+print("A pagar")          # Ja ho mostra a la línia següent (perquè ha fet intro)
+```
+El resultat per pantalla serà:
 
-print("LÍNIA", "ARTICLE ", "QUANT.", "PREU", "IMPORT", sep="\t")
+    ```text
+    Preu: 25 € amb IVA
+    A pagar
+    ```
 
-print("------- --------------- ------- ------- ------")
+- ***file*=fitxer** 
+  Hem vist que el que li posem al print ix per pantalla. Si en compte d'això volem guardar-ho en un fitxer hem d'usar el `file`.
+``` python
+fitxer = open("provetes.txt", "a")  # Obrim un fitxer (si no existeix, el crea)
 
-print(1, "Tomaques", 3, 2.5, 3\*2.5, sep="\t")
+print("Nom: Pep", file=fitxer)      # Escriu al fitxer (no per pantalla)        
+print("Edat: 17 anys", file=fitxer)
+print("Curs: SMX", file=fitxer)
 
-print(2, "Peres ", 12.5, 1.5, 12\*1.5, sep="\t")
+fitxer.close()                      # Tanquem el fitxer
+```
 
-print(3, "Plàtans ", 2, 2, 2\*2, sep="\t")
+    !!! success "Contingut del fitxer `provetes.txt` "
+        ... (Dades anteriors)<br>
+        Nom: Pep<br>
+        Edat: 17 anys<br>
+        Curs: SMX<br>
 
-- ***end***=finalitzador → Cadena que es mostrarà al final del text. Si
-  no posem res, per defecte és ‘\n’. És a dir, fa un intro o salt de
-  línia.
-
-print("Hola") \# Després de mostrar, fa un intro
-
-print("Adéu", end = "...") \# Després de mostrar, mostra 3 punts (sense
-intro)
-
-print("Pep", end = "") \# Després de mostrar, no fa res (ni intro)
-
-print("Pepa")
-
-> Mostrarà:
->
-> Hola
->
-> Adéu...PepPepa
-
-- ***file*=fitxer** → Per a enviar l’eixida a fitxer (no per pantalla):
-
-fitxer=open("nomFitxer.txt", "a")
-
-print("Hola, Pep", file = fitxer)
-
-Amb "a" (append) indiquem que el text que fem amb els print s’afegirà al
-final del contingut existent del fitxer. Si volguérem substituir el
-contingut anterior, utilitzaríem "w" en lloc de "a".
-
-La "x" no matxaca: crea un fitxer nou i dona error si ja existeix.
 
 ### Ús de f-strings (cadenes amb format)
 
-Els **f-strings** formar fàcilment una cadena de text barrejant text,
-variables i expressions.<span class="mark"></span>
+Amb els **f-strings** es pot formar fàcilment una cadena de text barrejant text, variables i expressions.
 
-Per exemple, si tenim:<span class="mark"></span>
+Per exemple, si tenim:
 
+```python
 nom = "Pep"
+edat = 17
+anyActual = 2026
+```
 
-edat = 56
+I vull mostrar per pantalla un text que diga...
 
-<span class="mark"></span>
+```text
+Em dic Pep i vàig nàixer en 2009
+```
+...ho puc fer de diverses maneres:
 
-<span class="mark">I vull mostrar per pantalla un text que diga “Em dic
-... i soc de l’any...”, ho puc fer de diverses maneres:</span>
 
-1)  <span class="mark">Passant al print diversos paràmetres (separats
-    per coma):</span>
+```python
+# a) Passant al print diversos paràmetres (separats per coma):
+print("Em dic", nom, "i vaig nàixer en ", anyActual - edat)
 
-<span class="mark">print("Em dic", nom, "i soc del", 2026 - edat)</span>
+# b) Passant al print un sol paràmetre: una cadena que concatena text i valors:
+print("Em dic " + nom + " i vaig nàixer en " + str(anyActual - edat))
 
-<span class="mark">b) Passant al print un paràmetre: una cadena que
-concatena text i valors:</span>
+# c) Passant al print un f-string (recomanat):
+print( f"Em dic {nom} i vaig nàixer en {anyActual - edat}")
+```
 
-<span class="mark">print("Em dic " + nom + " i soc del " + str(2026 -
-edat))</span>
+!!! note "Sintaxi del *f-string*"
+    **f"**... **{** valor **}** ... **{** valor **}** ... **{** valor **}** ...**"**
 
-<span class="mark">c) Usant els f-strings:</span>
+    És a dir:<br>
+    - S’escriu una **f** davant de les cometes.<br>
+    - I els valors (variables o expressions) van entre claus **{ }**.<br>
 
-print( f"Em dic {nom} i soc del {2026 - edat}") \# Em dic Pep i soc del
-1970
 
-<span class="mark"></span>
+    També podem indicar, amb `:`, el format en què volem mostrar cada valor:
 
-<span class="mark">És a dir, la sintaxi és:</span>
+    **f"**... **{** valor **: format }** ... **{** valor **: format }** ... **{** valor **: format }** ...**"**
+    
+    Ara vorem què posar en eixe **format**.
 
-> <span class="mark">f</span>"... <span class="mark">{valor} ...</span>"
 
-S’escriu una **f** davant de les cometes; i les variables o expressions
-van entre claus **{}**.
-
-També podem indicar (amb : ) el format en què volem mostrar-ho:
-
-> <span class="mark">f</span>"<span class="mark">{valor :
-> format}</span>"
-
-<span class="mark">En el format podem indicar:</span>
-
-- <span class="mark">En quants espais volem mostrar-ho:</span>
-
-| <span class="mark">f"{nom:8}"</span> | "Pepa " | En un espai de 8, posa el text a l’esquerra |
-|--------------------------------------|---------|---------------------------------------------|
-| <span class="mark">f"{x:8}"</span>   | " 7"    | En un espai de 8, posa el núm. a la dreta   |
-
-<span class="mark"></span>
-
-- <span class="mark">Si ho volem centrat (^) alineat a esquerra (\>) o a
-  dreta(\<), i en quants espais.</span>
-
-| f"{x:\>8}" | " 7"  | Alinea a la dreta, en una amplària de 8   |
-|------------|-------|-------------------------------------------|
-| f"{x:\<8}" | "7 "  | Alinea a l’esquerra, en una amplària de 8 |
-| f"{x:^8}"  | " 7 " | Centra, en una amplària de 8              |
-
-- Quants decimals volem en un float:<span class="mark"></span>
-
-| f"{pi:.2f}" | 3.14 | En un espai de 8, mostra 2 decimals |
-|-------------|------|-------------------------------------|
-
-<span class="mark"></span>
-
-- <span class="mark">I podem combinar eixos formats. Per exemple, podem
-  centrar en un espai de 10, un número float, amb 3 decimals:</span>
-
-| f"{pi:^8.2f}" | " 3.14 " | En un espai de 8, mostra 2 decimals |
-|---------------|----------|-------------------------------------|
-
-<span class="mark"></span>
-
+#### Format dels valors d'*f-string*
+  
+Suposem que tenim estes 2 variables:
+```python
 nom = "Pep"
+x = 7
+```
 
-edat = 30
+Veiem com podem indicar el format que volem per a eixos valors usant els *f-string*:
 
-pi = 3.14159265359
+- En **quants espais** volem mostrar el valor:
 
-print(f"El meu nom és {nom} i tinc {edat} anys")
+| Format | Resultat | Explicació |
+|--------|----------|------------|
+| `f"{nom:8}"` | <code>"Pepa&nbsp;&nbsp;&nbsp;&nbsp;"</code> | En un espai de 8, posa el **text a l’esquerra** |
+| `f"{x:8}"` | <code>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7"</code> | En un espai de 8, posa el **número a la dreta** |
 
-print(f"Tinc {edat:\<10} anys") \# Posa el número a l'esquerra dins de
-10 caràcters
+- **L'alineació**: centrat (`^`), a l’esquerra (`<`) o a la dreta (`>`), i en quants espais:
 
-print(f"Tinc {edat:\>10} anys") \# Posa el número a la dreta dins de 10
-caràcters
+| Format | Resultat | Explicació |
+|--------|----------|------------|
+| `f"{x:>8}"` | <code>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7"</code> | Alinea a la dreta, en una amplària de 8 |
+| `f"{x:<8}"` | <code>"7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</code> | Alinea a l’esquerra, en una amplària de 8 |
+| `f"{x:^8}"` | <code>"&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;"</code> | Centra el valor, en una amplària de 8 |
 
-print(f"Tinc {edat:^10} anys") \# Posa el número centrat dins de 10
-caràcters
+- **Quants decimals** volem en un `float`:
 
-print(f"Pi és {pi:.2f} aprox") \# Mostra 2 decimals
+| Format | Resultat | Explicació |
+|--------|----------|------------|
+| `f"{pi:.2f}"` | `3.14` | Mostra el número amb 2 decimals |
 
-print(f"Pi és {pi:\>10.2f} aprox") \# Mostra 2 decimals, a la dreta dins
-de 10 car.
+- I podem combinar eixos formats. Per exemple, podem centrar un número `float` en un espai de 8 i mostrar-lo amb 2 decimals:
 
-El resultat seria:
+| Format | Resultat | Explicació |
+|--------|----------|------------|
+| `f"{pi:^8.2f}"` | <code>"&nbsp;&nbsp;3.14&nbsp;&nbsp;"</code> | Centra el número en una amplària de 8 i mostra 2 decimals |
 
-<span class="mark"></span>
+!!! example "Exemples d'ús de *f-string*"
+    ```python
+    nom = "Pep"
+    edat = 30
+    pi = 3.14159265359
 
-Realment, els *f-strings* no estan lligats necessàriament al *print()*.
-S’utilitzen per a crear cadenes de text que incorporen dades amb el
-format desitjat. Per exemple:
+    print(f"Soc {nom} i tinc {edat} anys")  # Soc Pep i tinc 30 anys
 
-nom = "Pep"
+    print(f"Tinc {edat:<10} anys")          # Tinc 10         anys
 
-missatge = f"Hola, {nom}!" \# La variable missatge valdrà: “Hola, Pep!”
+    print(f"Tinc {edat:>10} anys")          # Tinc         10 anys
 
-print(missatge)
+    print(f"Tinc {edat:^10} anys")          # Tinc     10     anys
+
+    print(f"Pi és {pi:.2f} aprox")          # Pi és 3.14 aprox
+
+    print(f"Pi és {pi:>10.2f} aprox")       # Pi és       3.14 aprox
+    ```
+
+Realment, els *f-strings* no estan lligats necessàriament al *print()*. S’utilitzen per a crear cadenes de text que incorporen dades amb el format desitjat.
+
+!!! example "Exemple de f-string no lligat a un print"
+    ```python
+    nom = "Pep"
+    ...
+    missatge = f"Hola, {nom}!"  # La variable 'missatge' valdrà: “Hola, Pep!”
+    ...
+    print(missatge)
+    ```
 
 ### Operacions amb les cadenes (*str*)
 
-<span class="mark">Python disposa de moltes **operacions pròpies de les
-cadenes**: convertir-les a minúscules o majúscules, obtindre subcadenes,
-eliminar espais, substituir text, alinear el contingut, etc.
-Exemples:</span>
+Python disposa de moltes **operacions pròpies de les cadenes**: convertir-les a minúscules o majúscules, obtindre subcadenes, eliminar espais, substituir text, alinear el contingut, etc.
 
-<span class="mark">nom = " Pep Garcia "</span>
+!!! example "Exemples d'operacions amb les cadenes"
 
-<span class="mark">nom = nom.strip() \# nom = "Pep Garcia"</span>
+    ```python
+    nom = "   Pep Garcia   "
 
-<span class="mark">print(nom.upper()) \# PEP GARCIA</span>
+    nom = nom.strip()              # nom = "Pep Garcia" (lleva espais de principi i final)
 
-<span class="mark">print(nom.lower()) \# pep garcia</span>
+    print(nom.count("a"))          # 2 (compta quantes 'a' té)
 
-<span class="mark">print(nom.count('a')) \# 2</span>
+    nom = nom[0:3]                 # nom = "Pep" (agafa els 3 primers caràcters)
 
-<span class="mark">print(nom.ljust(15, '\_')) \# Pep
-Garcia\_\_\_\_\_</span>
+    print(f"Hola {nom.upper()} com va?")      # Hola pep com va? 
+    print(f"Hola {nom.upper()} com va?")      # Hola PEP com va?
+    print(f"Hola {nom.ljust(10)} com va?")    # Hola Pep        com va?
+    print(f"Hola {nom.center(10)} com va?")   # Hola    Pep     com va?
+    print(f"Hola {nom.rjust(10)} com va?")    # Hola        Pep com va?
+    ```
 
-<span class="mark">print(nom.rjust(15, '\_')) \# \_\_\_\_\_Pep
-Garcia</span>
+    !!! info "Dos formes d'alinear un text"
+        Observa que estes 2 instruccions fan el mateix:
+          ```python
+          print(f"Hola {nom.center(10)} com va?")
+          print(f"Hola {nom:^10} com va?")
+          ```
 
-<span class="mark">print(nom.center(15, '\_'))</span> \# \_\_\_Pep
-Garcia\_\_
+!!! note "Com podem vore les operacions disponibles d'una cadena?"
+    En **VS Code**, si escrivim un punt després d’una variable de tipus `str`, apareix una llista amb els mètodes disponibles per a treballar amb eixa cadena.
 
-<span class="mark"></span>
+    ![](img/ComandamentsStrVSCode.png){ width="50%" }
 
-<span class="mark">En **VS Code,** si escrivim un punt després d’una
-variable o d’un valor de tipus str, apareix una llista amb els mètodes
-disponibles per treballar amb eixa cadena.</span>
+    En **Thonny**, si volem vore eixes funcions, hem de polsar `Ctrl + Espai` després d’escriure el punt.
 
-<span class="mark">En **Thonny**, si volem vore eixes funcions hem de
-polsar Ctrl + Espai després d’escriure el punt:</span>
+    ![](img/ComandamentsStrThonny.png){ width="50% }
 
-<span class="mark"></span>
+!!! info "Operacions encadenades"
+    Podem aplicar diverses operacions sobre un mateix text en una sola instrucció:
 
-<span class="mark"></span>Hem vist que entre els mètodes disponibles per
-a les cadenes estan ljust(), center() i rjust(), que permeten alinear el
-text dins d’un espai d’amplària determinada. Per tant, són una
-alternativa als especificadors d’alineació dels
-f-strings.<span class="mark"></span>
+    ```python
+    textInicial = " Hola Pep "
 
-nom = "Pep"
+    textFinal = text.strip().lower().replace("pep", "món").capitalize()  # Hola món
+    ```
+    El que ha fet, i en eixe ordre, és:<br>
+    1. *strip()* ha eliminat els espais de l'inici i final<br>
+    2. *lower()* ho ha passat a minúscules<br>
+    3. *replace("pep", "món")* ha reemplaçat "*pep*" per "*món*"<br>
+    4. *capitalize()* ha posat la 1a lletra en majúscules.<br>
 
-print("Hola", nom.upper(), "com va?"). \# Hola PEP com va?
 
-print("Hola", nom.ljust(10, '\_'), "com va?") \# Hola Pep\_\_\_\_\_\_\_
-com va?
+## 6. Entrada de dades: `input`
 
-print("Hola", nom.center(10, '\_'), "com va?") \# Hola \_\_\_Pep\_\_\_\_
-com va?
+Serveix per a que un programa puga demanar dades per teclat.
 
-print("Hola", nom.rjust(10, '\_'), "com va?") \# Hola \_\_\_\_\_\_\_Pep
-com va?<span class="mark"></span>
+```python
+nom = input("Com et diuen?")        # nom = "Pep"
+print(f"Hola, {nom}!")              # Hola, Pep!
+```
 
-Caràcter que volem usar per a emplenar el lloc buit.
+L'input espera que posem alguna cosa per teclat (acabem amb intro). Després posa eixe valor en la variable (`nom` en este cas)
 
-Podríem posar l’espai (‘ ‘) o el que siga.
+El text arreplegat per l'input sempre és de tipus `str` (text).
 
-<span class="mark"></span>
+!!! warning "Què passa si llegim un número?"
+    ```python
+    num = input("Dis-me un número: ")   # num = "56"
+    num = num + 1 # "TypeError: can only concatenate str (not "int") to str"
+    ```
 
-<span class="mark"></span>
+    **Error**: Com el valor llegit per l'input és de tipus *str* (text), en `num` tindrem un text (`"56"`), no un número (`56`). Per tant, l'expressió `num + 1` donarà error ja que Python no sap sumar (ni concatenar) textos amb números (`"56" + 1`).
 
-<span class="mark"></span>
+!!! success "Solució: llegirem números usant `casting`"
+    Per a llegir números de teclat cal usar càsting:
+    ```python
+    num = int( input("Dis-me un número: ") )
+    num = num + 1
+    ```
+    El valor introduït (per exemple, `"56"`) el convertim, amb `int`, de text a enter (`56`, sense cometes). Per tant, el `num + 1` ara sumarà números i no donarà error (`56 + 1`).
 
-<span class="mark">O bé, usant f-strings però amb el format propi de les
-cadenes (no de l’f-string):</span>
+    I si volem llegir números amb decimals usarem `float` en compte d'`int`.
 
-nom = "Pep"
-
-print(f"Hola {nom.upper()} com va?") \# Hola PEP com va?
-
-print(f"Hola {nom.ljust(10, '\_')} com va?") \# Hola Pep\_\_\_\_\_\_\_
-com va?
-
-print(f"Hola {nom.center(10, '\_')} com va?") \# Hola \_\_\_Pep\_\_\_\_
-com va?
-
-print(f"Hola {nom.rjust(10, '\_')} com va?") \# Hola \_\_\_\_\_\_\_Pep
-com va?
-
-<span class="mark"></span>
-
-<span class="mark">També podem aplicar diversos mètodes sobre un mateix
-text en una sola instrucció:</span>
-
-<span class="mark">text = " Hola Pep "</span>
-
-<span class="mark">resultat = text.strip().lower().replace("pep",
-"món").capitalize()</span>
-
-<span class="mark">print(resultat) \# Hola món</span>
-
-<span class="mark"></span>
-
-<span class="mark">  
-</span>
-
-## 6. Entrada de dades: *input* <span class="mark"></span>
-
-Serveix per a que un programa puga demanar dades per teclat. Serà un poc
-diferent segons el tipus de dades que volem introduir.
-
-Vegem-ho amb exemples:
-
-### Entrada de text
-
-Ací l'execució espera que li posem per teclat un valor i polsem intro.
-
-El valor introduït es guardarà en la variable *nom*.
-
-print("Com et diuen?")
-
-nom = input()
-
-print("Hola, " + nom +"!")
-
-Ara bé, l'*input* de Python també permet indicar el que estem demanant,
-sense haver de fer abans el *print*:
-
-Ací mostrarà el text, i farà l'input normal.
-
-nom = input("Com et diuen?")
-
-print("Hola, " + nom +"!")
-
-Veiem que, en este cas, no ha fet intro (salt de línia) després de
-preguntar "Com et diuen?". Si el volem, cal posar-lo manual (caràcter
-‘\n’):
-
-nom = input("Com et diuen?\n")
-
-print("Hola, " + nom +"!")
-
-### Entrada de números
-
-El problema és si, en compte de demanar un text per teclat, volem
-demanar un número, ja que l'agafarà com a text i no podrem fer
-operacions aritmètiques amb ell:
-
-num = input("Dis-me un número: ")
-
-print("El següent número és el ", num + 1) \# Error:
-
-Això provoca l'error:
-
-*"TypeError: can only concatenate str (not "int") to str"*
-
-Això és degut a que *input* sempre retorna un *str*. Per això, en
-l'expressió *num + 1* intenta concatenar en compte de sumar. I dona
-error perquè no es poden concatenar números sinó textos.
-
-Per tant, si volem fer tractar-lo com a enter caldrà fer un *càsting*
-(conversió de tipus):
-
-num = input("Dis-me un número: ")
-
-num = int(num) \# Ací fem el càsting o conversió de tipus
-
-print("El següent número és el ", num + 1)
-
-Però és millor fer l'*input* i el càsting en la mateixa instrucció:
-
-num = int( input("Dis-me un número: ") ) \# Es fa càsting sobre
-l'entrada de dades
-
-print("El següent número és el ", num + 1)
-
-En compte d'*int* també es podria fer el càsting a *float*, si fora el
-cas.
 
 ### Diverses entrades en un mateix *input*:
+Podem introduir *diverses dades en un mateix input()*, separades per un caràcter determinat.
 
-En un input podem demanar diverses dades separades per un espai en blanc
-(o pel caràcter que vullgam). Ara bé: això no té res a vore amb l'input,
-sinó amb el mètode ***split*** del tipus de dades *str*. Veiem uns
-exemples:
+!!! example "Exemple"
+    ```python
+    horaCompleta = input("Quina hora és (en format h:m:s): ")
+    hores, minuts, segons = horaCompleta.split(":")
+    ```
 
-horaCompleta = input("Dis-me quina hora és (en format h:m:s): ")
+El mètode *split()* permet *dividir una cadena de text en diverses parts*. Entre parèntesis indiquem quin caràcter s'utilitzarà com a separador.
 
-hores, minuts, segons = horaCompleta.split(":")
+Si l'usuari introdueix:
+```text
+12:35:20
+```
 
-*split* separa una cadena en una llista de cadenes (a partir del
-separador ‘:’).
+obtindrem estos valors:
+```python
+horaCompleta = "12:35:20"
+hores = "12"
+minuts = "35"
+segons = "20"
+```
 
-*Si en split* no indiquem el separador, per defecte és l’espai ‘ ‘.
+Com podem vore, també podem fer diverses assignacions alhora:
+```python
+hores, minuts, segons = ...
+```
 
-Fem 3 assignacions alhora.
+Si no indiquem cap separador en *split()*, s'utilitzen els espais en blanc. Per exemple:
 
-pes, altura = input("Dis-me el pes i altura (separats per blanc):
-").split()
+```python
+pes, altura = input("Dis-me el pes i altura (separats per un espai").split()
+```
+Si l'usuari introdueix:
+```text
+75
+1.80
+```
+s'obtindrà:
+```python
+pes = "75"
+altura = "1.80"
+```
+!!! warning "Important"
+    Els valors obtinguts continuen sent de tipus `str`. Si volem treballar amb ells com a números, haurem de fer els càstings corresponents:
 
-Veiem que quan fem *split*, en l'assignació cal posar tantes variables
-com dades s'espera que s'introduïsquen. Si no, donarà error.
+    ```python
+    pes, altura = input("Dis-me el pes i altura (separats per un espai").split()
+    pes = int(pes)
+    altura = float(altura)
+    ```
 
-I, si fora el cas, caldria fer els càstings corresponents a *int* o
-*float* de cada variable.
+En l'assignació hem de posar tantes variables com dades esperem obtindre amb *split()*. Si no, donarà error.
 
-Exercicis sobre entrada i eixida de dades
+!!! question "Exercicis sobre entrada i eixida de dades"
 
-3\. Fes un programa que pregunte quants anys té algú i que mostre per
-pantalla la quantitat d’anys que falten per a la majoria d’edat i per a
-jubilar-se.
+    Fes els següents programes. El nom del fitxer serà ud4_n.py (on `n`és el número d'exercici). Utilitza els *f-string* per a mostrar les dades per pantalla.
 
-4\. Programa que pregunte per la base i l’altura d’un triangle i mostre
-per pantalla l’àrea d’eixe triangle.
+    5. Fes un programa que pregunte quants anys té algú i que mostre per
+    pantalla la quantitat d’anys que falten per a la majoria d’edat i per a
+    jubilar-se.
 
-5\. Demana per teclat les dades de 2 llibres: títol, autor i preu
-(permet decimals). Després cal mostrar les dades en forma de taula: 30
-caràcters per al títol, 20 per a l'autor i 10 per al preu (incloent 2
-decimals i alineat a dreta). Per exemple:
+    6. Programa que pregunte per la base i l’altura d’un triangle i mostre
+    per pantalla l’àrea d’eixe triangle.
 
-> Diccionari per a ociosos Joan Fuster 9.90
+    7. Demana per teclat les dades de 2 llibres: títol, autor i preu
+    (permet decimals). Després cal mostrar les dades en forma de taula: 30
+    caràcters per al títol, 20 per a l'autor i 10 per al preu (incloent 2
+    decimals i alineat a dreta). Per exemple:<br>
 
-L'home manuscrit Manuel Baixauli 21.25
+        ```text
+        Diccionari per a ociosos      Joan Fuster               9.90 
+        L'home manuscrit              Manuel Baixauli          21.25 
+        ```
 
-6\. Demana per teclat només un valor: una data (per exemple: 6/9/2024).
-Després escriu eixa data però amb el format: "6 del 9 de
-2024".<span class="mark"></span>
+    8. Demana per teclat només un valor: una data (per exemple: "28/9/2026").
+    Després escriu eixa data però amb el format: "28 del 9 de 2026".
 
-7\. Exercicis
 
-7.  Escriu el resultat de les següents expressions:
+    9. Troba els errors en el següent programa que calcula l’àrea d’un cercle a partir del radi. Després copia'l amb les correccions i executa’l per a vore si és correcte.
 
-<!-- -->
+          ```python
 
-1)  5 / 2 + 17 % 3
+          print("pi=", pi)
+              
+          pi = 3,14
+              
+          print(Programa de càlcul de l’àrea d’un cercle)
+              
+          radi == input('Dis-me el radi');
+              
+          # Calcular i mostrar l’àrea
+              
+          area = PI * radio ** 2
+              
+          print('\n\nL'àrea del cercle és: {aera:5.2}\n')
+          ```
 
-2)  (8 / 2 \* 3) / 2 - int(28.7) // 4 + 29 % 3 \* 4
+    10. Sense executar el programa, digues què mostrarà per pantalla:
 
-3)  3 \<= 4
+          ```python
+          a = 10
+          b = 3
+          c = a/b
+          d = a<b and c>2
+          a -= a + b
+          b = float(a//b)
+          print(a, b, c, d)
+          ```
 
-4)  45 \<= 7 or not(5 \>= 7)
+    11. Fes un programa en Python per a calcular el sou d’un treballador. Copia el següent algorisme en un fitxer Python i posa les instruccions corresponents a cada comentari.
 
-5)  (8 \* 2 \< 5 or 7 + 2 \> 9) and 8 - 5 \< 18
+        ```python
+        # ----- ENTRADA DE DADES PER TECLAT -----------------
+        # Demanar nom del treballador
 
-6)  (2 \* 7 \> 5 or 7 / 2 == 3) and (7 \> 25 or not True) and True
 
-7)  35 \> 47 and 9 == 9 or 35 != 3 + 2 and 3 \>= 3
+        # Demanar quantes hores ha treballat
 
-8)  9 == 15 or 8 != 5 and 7 == 4
 
-9)  8 \> 8 or 7 == 7 and not(5 \< 5)
+        # Demanar el preu per hora que paga l'empresa
 
-10) 4 + 2 \< 8 and 24 + 1 == 25 or True
 
-<!-- -->
+        # ----- CÀLCULS --------------------------------------
+        # Càlcul del sou brut (import que paga l'empresa al treballador)
 
-8.  Escriu una expressió on s’especifique que una variable numèrica de
-    nom *quant* siga menor o igual que 500 i múltiple de 5 però distinta
-    de 100.
 
-9.  Troba els errors en el següent programa que calcula l’àrea d’un
-    cercle a partir del radi. Després copia'l amb les correccions i
-    executa’l per a vore si és correcte.
+        # Càlcul del sou retingut (import que pagarà el treballador a hisenda, sabent que és el 15%)
 
-> print("pi=", pi)
->
-> pi = 3,14
->
-> print(Programa de càlcul de l’àrea d’un cercle)
->
-> radi = input('Dis-me el radi');
->
-> '''Calcular i imprimir l’àrea
->
-> area = PI \* radio\*\*2;
->
-> print('\n\nL'àrea del cercle és: {aera:5.2}\n');
 
-10. Sense executar el programa, digues què mostrarà per pantalla:
+        # Càlcul del sou net (import que s'emporta el treballador)
 
-> a = 10
->
-> b = 3
->
-> c = a/b
->
-> d = a\<b and c\>2
->
-> a -= a + b
->
-> b = float(a//b)
->
-> print(a, b, c, d)
 
-11. Fes un programa en Python per a calcular el sou d’un treballador:
+        # ----- EIXIDA DE RESULTATS --------------------------
+        # Mostra per pantalla el nom del treballador i les dades calculades abans
 
-> \- Demana per teclat el nom del treballador, la quantitat de hores que
-> ha treballat i el preu per hora que paga l’empresa.
->
-> \- Calcula el sou brut (import que paga l'empresa al treballador)
->
-> \- Calcula l'import retingut (import que pagarà el treballador a
-> hisenda, sabent que és el 15%).
->
-> \- Calcula el sou net (import que s'emporta el treballador).
->
-> \- Mostra per pantalla el nom del treballador i les dades calculades
-> abans.
+
+        ```
