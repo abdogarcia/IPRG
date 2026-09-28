@@ -11,5 +11,3 @@ En esta unitat passarem de programes que simplement executen instruccions de dal
 5. Alteració del flux en els bucles
 6. Algoritmes bàsics
 7. Exercicis de repàs
-
-[Comencem!](ud5.1.ProgramacioEstructurada.md){ .md-button .centrat }

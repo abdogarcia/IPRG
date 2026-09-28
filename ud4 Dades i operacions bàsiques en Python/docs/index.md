@@ -4,4 +4,4 @@ En la UD2 vam vore com tractar de forma general les dades que manipulen els prog
 
 ## Continguts
 
-- [Dades i operacions bàsiques en Python](ud4.1.DadesIOperacionsBasiquesEnPython.md)
+1. Dades i operacions bàsiques en Python
